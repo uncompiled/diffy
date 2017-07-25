@@ -1,0 +1,19 @@
+version: "2"
+services:
+  diffy:
+    build: .
+    ports:
+      - 8888:8888
+      - 8881:8881
+      - 80:80
+    env_file: .env
+    environment:
+      - CANDIDATE
+      - MASTER_PRIMARY
+      - MASTER_SECONDARY
+      - SERVICE_NAME
+      - ROOT_URL=localhost:8888
+      - SERVICE_PROTOCOL=http
+      - ADMIN_PORT=8881
+      - HTTP_PORT=8888
+      - PROXY_PORT=80

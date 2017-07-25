@@ -6,3 +6,4 @@ ADD . /tmp
 WORKDIR /tmp
 RUN ./sbt assembly
 
+CMD ["./run.sh"]
